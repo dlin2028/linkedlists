@@ -8,7 +8,7 @@ namespace LinkList
 {
     class SinglyLinkedList<T>
     {
-        public SingleLinkedNode<T> head;
+        public SinglyLinkedNode<T> head;
         public int count = 0;
         public SinglyLinkedList()
         {
@@ -17,7 +17,7 @@ namespace LinkList
         
         public void AddToFront(T item)
         {
-            SingleLinkedNode<T> newNode = new SingleLinkedNode<T>(item, head);
+            SinglyLinkedNode<T> newNode = new SinglyLinkedNode<T>(item, head);
             head = newNode;
             count++;
         }
@@ -25,14 +25,14 @@ namespace LinkList
         {
             if(head != null)
             {
-                SingleLinkedNode<T> lastNode = getNode(count - 1);
-                SingleLinkedNode<T> newNode = new SingleLinkedNode<T>(item, null);
+                SinglyLinkedNode<T> lastNode = getNode(count - 1);
+                SinglyLinkedNode<T> newNode = new SinglyLinkedNode<T>(item, null);
                 lastNode.NextNode = newNode;
                 count++;
             }
             else
             {
-                head = new SingleLinkedNode<T>(item);
+                head = new SinglyLinkedNode<T>(item);
                 count++;
             }
         }
@@ -61,12 +61,12 @@ namespace LinkList
             }
             else
             {
-                SingleLinkedNode<T> lastNode = getNode(count - 1);
+                SinglyLinkedNode<T> lastNode = getNode(count - 1);
                 if (lastNode == null)
                 {
                     return false;
                 }
-                SingleLinkedNode<T> secondLastNode = getNode(count - 1);
+                SinglyLinkedNode<T> secondLastNode = getNode(count - 1);
                 secondLastNode.NextNode = null;
                 count--;
                 return true;
@@ -75,7 +75,7 @@ namespace LinkList
 
         public new void ToString()
         {
-            SingleLinkedNode<T> nodeOfi = head;
+            SinglyLinkedNode<T> nodeOfi = head;
             for (int i = 0; i < count; i++)
             {
                 Console.WriteLine(nodeOfi.Item);
@@ -113,9 +113,9 @@ namespace LinkList
             return false;
         }
 
-        private SingleLinkedNode<T> getNode(int index)
+        private SinglyLinkedNode<T> getNode(int index)
         {
-            SingleLinkedNode <T> nodeOfi = head;
+            SinglyLinkedNode <T> nodeOfi = head;
             for (int i = 0; i < index; i++)
             {
                 nodeOfi = nodeOfi.NextNode;

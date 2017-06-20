@@ -6,24 +6,24 @@ using System.Threading.Tasks;
 
 namespace LinkList
 {
-    class SingleLinkedNode<T>
+    class SinglyLinkedNode<T>
     {
         public T Item;
-        public SingleLinkedNode<T> NextNode;
-        public SingleLinkedNode(T item, SingleLinkedNode<T> next = null)
+        public SinglyLinkedNode<T> NextNode;
+        public SinglyLinkedNode(T item, SinglyLinkedNode<T> next = null)
         {
             Item = item;
             NextNode = next;
         }
-        public SingleLinkedNode<T> AddAfter(T item)
+        public SinglyLinkedNode<T> AddAfter(T item)
         {
-            SingleLinkedNode<T> newNode = new SingleLinkedNode<T>(item);
+            SinglyLinkedNode<T> newNode = new SinglyLinkedNode<T>(item);
             NextNode.Item = item;
             return newNode;
         }
-        public SingleLinkedNode<T> RemoveAfter()
+        public SinglyLinkedNode<T> RemoveAfter()
         {
-            SingleLinkedNode<T> nextNode = NextNode.NextNode;
+            SinglyLinkedNode<T> nextNode = NextNode.NextNode;
             NextNode = NextNode.NextNode;
             return nextNode;
         }
