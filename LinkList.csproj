@@ -43,8 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DavidLinkedListt.cs" />
-    <Compile Include="Node.cs" />
+    <Compile Include="SinglyLinkedList.cs" />
+    <Compile Include="SinglyLinkedNode.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

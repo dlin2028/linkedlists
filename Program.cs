@@ -10,29 +10,38 @@ namespace LinkList
     {
         static void Main(string[] args)
         {
-            while(true)
+            SinglyLinkedList<string> linklist = new SinglyLinkedList<string>();
+            while (true)
             {
-                DavidLinkedListt<int> linklist = new DavidLinkedListt<int>;
                 Console.WriteLine("_____________________________");
                 Console.WriteLine("Operation: ");
                 string operation = Console.ReadLine();
-                Console.WriteLine("Arguements: ");
-                string arguements = Console.ReadLine();
+                Console.WriteLine("Arguments: ");
+                string arguments = Console.ReadLine();
 
-                if(operation.ToLower() == "addtofront")
+                if (operation.ToLower() == "addtofront")
                 {
+                    linklist.AddToFront(arguments);
                 }
                 else if (operation.ToLower() == "addtoend")
                 {
-
+                    linklist.AddtoEnd(arguments);
                 }
                 else if (operation.ToLower() == "removefromfront")
                 {
-
+                    linklist.removeFromFront();
                 }
                 else if (operation.ToLower() == "removefromend")
                 {
-
+                    linklist.removeFromEnd();
+                }
+                else if (operation.ToLower() == "removeat")
+                {
+                    linklist.removeAt(int.Parse(arguments));
+                }
+                else if (operation.ToLower() == "print")
+                {
+                    linklist.ToString();
                 }
             }
         }
